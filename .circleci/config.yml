@@ -54,7 +54,7 @@ jobs:
     steps:
       - print_pipeline_id:
            id: << pipeline.id >>
-      - run: return 1
+     # - run: return 1
       - run: 
           name: on error
           command: echo 'Error in this job'
