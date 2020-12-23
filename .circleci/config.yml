@@ -54,6 +54,11 @@ jobs:
     steps:
       - print_pipeline_id:
            id: << pipeline.id >>
+      - run: return 1
+      - run: 
+          name: on error
+          command: echo 'Error in this job'
+          when: on_fail    
 
 workflows:
   # Name the workflow "welcome"
