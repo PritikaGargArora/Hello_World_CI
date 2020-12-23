@@ -21,9 +21,9 @@ jobs:
       - image: cimg/base:2020.01
     steps:
       - checkout
-      - run:
+      - run: echo ${MY_ENV_VAR}
           #name: "echo an env var that is part of our project"
-          command: echo ${MY_ENV_VAR}    
+          #command: echo ${MY_ENV_VAR}    
 workflows:
   # Name the workflow "welcome"
   welcome:
